@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Silva - Desenvolvedor Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>João Silva</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Olá, eu sou <span class="highlight">João Silva</span>
+                </h1>
+                <p class="hero-subtitle">Desenvolvedor Web Full-Stack</p>
+                <p class="hero-description">
+                    Transformo ideias em experiências digitais incríveis. Especializado em criar sites modernos, 
+                    responsivos e otimizados que ajudam empresas a crescer online.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-avatar">
+                    <img src="/placeholder.svg?height=300&width=300" alt="João Silva">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sou um desenvolvedor web apaixonado por criar soluções digitais que fazem a diferença. 
+                        Com experiência em tecnologias modernas, foco em entregar projetos de alta qualidade 
+                        que atendem às necessidades específicas de cada cliente.
+                    </p>
+                    <p>
+                        Minha abordagem combina design atrativo com funcionalidade robusta, sempre priorizando 
+                        a experiência do usuário e a performance. Estou sempre aprendendo novas tecnologias 
+                        para oferecer as melhores soluções.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Desenvolvedor trabalhando">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Python, PHP, MySQL, MongoDB</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>Mobile</h3>
+                    <p>React Native, Flutter, Progressive Web Apps</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design</h3>
+                    <p>UI/UX, Figma, Adobe XD, Responsive Design</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Meu Portfólio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="E-commerce Website">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce Moderno</h3>
+                            <p>Loja online completa com sistema de pagamento</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">Ver Projeto</a>
+                                <a href="#" class="portfolio-link">Código</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="App Mobile">
+                        <div class="portfolio-overlay">
+                            <h3>App de Delivery</h3>
+                            <p>Aplicativo mobile para delivery de comida</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">Ver Projeto</a>
+                                <a href="#" class="portfolio-link">Código</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Dashboard Corporativo">
+                        <div class="portfolio-overlay">
+                            <h3>Dashboard Corporativo</h3>
+                            <p>Sistema de gestão empresarial completo</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">Ver Projeto</a>
+                                <a href="#" class="portfolio-link">Código</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Design UI/UX">
+                        <div class="portfolio-overlay">
+                            <h3>Design UI/UX</h3>
+                            <p>Interface moderna para aplicativo financeiro</p>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">Ver Projeto</a>
+                                <a href="#" class="portfolio-link">Código</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos trabalhar juntos!</h3>
+                    <p>Estou sempre aberto a novos projetos e oportunidades. Entre em contato e vamos conversar sobre como posso ajudar seu negócio a crescer.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>joao.silva@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>São Paulo, SP</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 João Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
