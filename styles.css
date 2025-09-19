@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Tirar margens e pagging */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* Navegação */
 .navbar {
     position: fixed;
     top: 0;

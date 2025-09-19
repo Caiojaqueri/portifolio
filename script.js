@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle
+// Alterar navegação mobile 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -7,13 +7,13 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Fechar meu mobile ao clickar em um link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links
+// Rolagem suave para os links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
+// Fundo da navbar ao rolar a página
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animate skill bars when in viewport
+// Animar barras de habilidades quando visíveis
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
@@ -58,21 +58,21 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe skills section
+// Observar seção de habilidades
 const skillsSection = document.querySelector('.skills');
 if (skillsSection) {
     observer.observe(skillsSection);
 }
 
-// Portfolio filter functionality
+// Funcionalidade de filtro para portfólio
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
+        // Remove a classe active de todos os botões
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
+        // Adiciona a classe active ao botão clicado
         button.classList.add('active');
         
         const filterValue = button.getAttribute('data-filter');
@@ -88,39 +88,39 @@ filterButtons.forEach(button => {
     });
 });
 
-// Contact form handling
+// Pulação do formulário de contato
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
+        // Obter dados do formulário
         const formData = new FormData(this);
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
         const message = formData.get('message');
         
-        // Simple validation
+        // Validação simples
         if (!name || !email || !subject || !message) {
             alert('Por favor, preencha todos os campos.');
             return;
         }
         
-        // Email validation
+        // Validação de e-mail
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Por favor, insira um e-mail válido.');
             return;
         }
         
-        // Simulate form submission
+        // Mostrar mensagem de envio
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
         
-        // Simulate API call
+        // Simular chamada á API
         setTimeout(() => {
             alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
             this.reset();
@@ -130,7 +130,7 @@ if (contactForm) {
     });
 }
 
-// Animate elements on scroll
+// Animar elementos ao rolar a página
 const animateOnScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -142,12 +142,12 @@ const animateOnScroll = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px'
 });
 
-// Observe elements for animation
+// Observar elementos para animação
 document.querySelectorAll('.skill-card, .portfolio-item, .about-text, .contact-info').forEach(el => {
     animateOnScroll.observe(el);
 });
 
-// Typing effect for hero title
+// Efeito de digitação para o título principal
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -163,7 +163,7 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
+// Iniciar efeito de digitação no carregamento da página
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
@@ -172,7 +172,7 @@ window.addEventListener('load', () => {
     }
 });
 
-// Parallax effect for hero section
+// Efeito parallax na imagem do herói
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroImage = document.querySelector('.hero-avatar');
@@ -183,7 +183,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add loading animation to page
+// Efeito de fade-in na carga da página
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
@@ -193,7 +193,7 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Active navigation link highlighting
+// Destacar link de navegação ativo com base na seção visível
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
