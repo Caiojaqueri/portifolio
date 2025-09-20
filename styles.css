@@ -154,12 +154,14 @@ body {
 }
 
 .btn-primary {
-    background: #0891b2;
-    color: white;
+    background: transparent;
+    color: #0891b2;
+    border: 2px solid #0891b2;
 }
 
 .btn-primary:hover {
     background: #0e7490;
+    color: white;
     transform: translateY(-2px);
 }
 
@@ -235,6 +237,7 @@ body {
     color: #64748b;
     margin-bottom: 1.5rem;
     line-height: 1.7;
+    text-align: center;
 }
 
 .about-stats {
@@ -435,7 +438,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .portfolio-link:hover {
@@ -496,7 +499,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .social-link:hover {
