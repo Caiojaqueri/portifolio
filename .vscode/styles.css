@@ -381,7 +381,7 @@ body {
 
 .portfolio-image {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .portfolio-image img {
