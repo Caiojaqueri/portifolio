@@ -226,17 +226,31 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    /* Mostrar apenas uma coluna: texto centralizado; imagem será escondida */
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: center;
 }
 
-.about-text p {
-    font-size: 1.1rem;
-    color: #64748b;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+.about-text {
+    display: flex;
+    flex-direction: column; /* empilha os parágrafos verticalmente */
+    gap: 0.4rem; /* espaçamento entre parágrafos reduzido */
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin: 0 0 0.8rem 0; /* margem inferior reduzida */
+    line-height: 1.6;
+    max-width: 70ch; /* limita a largura para melhor leitura */
+}
+
+.about-text p:last-child {
+    margin-bottom: 0; /* remove margem extra do último parágrafo */
 }
 
 .about-stats {
@@ -267,10 +281,8 @@ body {
     font-weight: 500;
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+.about-image {
+    display: none; /* Esconder a imagem da seção 'Sobre' conforme solicitado */
 }
 
 /* Skills Section */
@@ -381,10 +393,11 @@ body {
 
 .portfolio-image {
     position: relative;
-    overflow: visible;
+    overflow: hidden; /* corta qualquer parte da imagem que expanda ao aplicar scale */
 }
 
 .portfolio-image img {
+    display: block; /* evita whitespace abaixo da imagem */
     width: 100%;
     height: 250px;
     object-fit: cover;
