@@ -1,2 +1,2 @@
-# portifolio
-Projeto do meu futuro portifólio
+# portfólio
+Projeto do meu portfólio profissional
